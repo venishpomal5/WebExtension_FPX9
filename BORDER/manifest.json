@@ -1,0 +1,17 @@
+file name: manifest.json
+{
+	"description":"Adds a solid red broder to all webpages matching mozilla.org.",
+	"manifest_version":2,
+	"name":"borderify",
+	"version":"1.0",
+	"homepage_url":"htps://github.com/mdn/webextensions-examples/tree/master/borderify",
+	"icons":{
+		"48":"android.png"
+	},
+	"content_scripts":[
+		{
+			"matches":["*://*.mozilla.org/*"],
+			"js":["border"]
+		}
+	]
+}
